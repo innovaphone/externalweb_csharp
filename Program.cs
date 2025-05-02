@@ -7,7 +7,7 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Session und Cache konfigurieren
+// Session and Cache configuration
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
@@ -22,7 +22,7 @@ var app = builder.Build();
 
 app.UseSession();
 
-// Zugriffsschutz für app.htm
+// Access and protection for app.htm
 app.Use(async (context, next) =>
 {
     if (context.Request.Path.StartsWithSegments("/app.htm"))
@@ -40,7 +40,7 @@ app.Use(async (context, next) =>
 
 app.UseStaticFiles();
 
-// Login-Logik auf /login
+// Login-Logic to /login
 app.MapGet("/login", async context =>
 {
     var mt = context.Request.Query["mt"];
@@ -90,7 +90,7 @@ app.MapGet("/login", async context =>
 
 app.Run("https://0.0.0.0:8181");
 
-// Hilfsmethoden
+// helper methods
 static string GenerateRandomString(int length)
 {
     const string chars = "abcdefghijklmnopqrstuvwxyz123456789";
