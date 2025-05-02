@@ -1,9 +1,3 @@
-Your README file looks great! It provides clear instructions for setting up and using the C# web server, including explanations of the authentication flow, session management, and security considerations.
-
-Here’s a minor refinement to your README content for clarity:
-
----
-
 ## C# Web Server with Session Management and Authentication
 
 This is a simple C# web server using ASP.NET Core to handle sessions, perform authentication, and serve static files. It features a basic authentication mechanism with a challenge-response flow to secure access to an HTML page (`app.htm`).
@@ -71,7 +65,3 @@ This is a simple C# web server using ASP.NET Core to handle sessions, perform au
 ### License
 
 This project is completely free to use, modify, and distribute.
-
----
-
-This version offers a concise and easy-to-follow explanation, while preserving the necessary details. You can now use it for your GitHub repository or other documentation.
