@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Webservice</title>
+    <script type="text/javascript" src="phpsession.js"></script>
+    <script type="text/javascript">
+        function start() {
+            var args = location.search.split("&");
+            if (args[0].startsWith("?")) args[0] = args[0].slice(1);
+            var name = args.find(function (e) { return e.startsWith("name=") });
+            if (name) {
+                new innovaphone.PhpSession("login", name.split("=")[1], "app.htm", "");
+            }
+        }
+    </script>
+</head>
+
+<body onload="start()">
+    <h1>Login</h1>
+</body>
+</html>
