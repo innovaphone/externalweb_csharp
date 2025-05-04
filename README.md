@@ -13,12 +13,12 @@ This is a simple C# web server using ASP.NET Core to handle sessions, perform au
 
 1. Clone or download this repository.
 2. Open the solution in your preferred C# development environment (e.g., Visual Studio, Visual Studio Code).
-3. Install dependencies by running:
+3. Create a directory and open this path in bash. Than create a new webapp
 
    ```bash
-   dotnet restore
+   dotnet new webapp
    ```
-4. Build and run the project:
+4. Replace Program.cs and wwwroot-folder with the the downloaded repository sources and run the code.
 
    ```bash
    dotnet run
