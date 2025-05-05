@@ -65,7 +65,7 @@ app.MapGet("/login", async context =>
         var dn = context.Request.Query["dn"];
         var info = context.Request.Query["info"];
         var digest = context.Request.Query["digest"];
-        var challenge = context.Request.Query["challenge"];
+        var challenge = context.Session.GetString("challenge");
         var appPwd = "pwd";
 
         var data = $"{app}:{domain}:{sip}:{guid}:{dn}:{info}:{challenge}:{appPwd}";
